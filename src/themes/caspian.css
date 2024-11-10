@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Noto+Sans:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&family=Inter:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&family=Poppins:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
+
+.theme.caspian h1, .theme.caspian h2, .theme.caspian h3, .theme.caspian h4, .theme.caspian h5, .theme.caspian h6 {
+    font-family: 'Inter','Noto Sans SC';
+}
+
+.theme.caspian h1 {
+    color: #222;
+    font-weight: 800;
+    font-size: 4rem;
+    margin-top: 0;
+    text-align: left;
+}
+
+.theme.caspian h2 {
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    text-transform: uppercase;
+    color: #222;
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-top: 1em;
+}
+
+.theme.caspian h2:before {
+    background-color: #016ef1;
+    bottom: -2px;
+    content: '';
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: fit-content;
+}
+
+.theme.caspian h3 {
+    color: #222;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.theme.caspian h3 + p {
+    margin-top: .2rem;
+}
+
+.theme.caspian p {
+    margin-top: .5rem;
+}
+
+.theme.caspian a {
+    color: #222;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.theme.caspian hr {
+    border-top: 1px solid #ddd;
+    margin: 1em 0;
+}
+
+.theme.caspian strong {
+    color: #222;
+    font-weight: 600;
+}
+
+.theme.caspian em {
+    font-style: italic;
+}
+
+.theme.caspian ul {
+    padding-left: 12px;
+    margin-top: .5em;
+    list-style-type: none;
+}
+
+.theme.caspian ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.theme.caspian ul li:before {
+    color: #016ef1;
+    font-family: 'Inter';
+    font-weight: 600;
+    content: '•';
+    left: -12px;
+    position: absolute;
+    margin-right: .5em;
+}
+
+.theme.caspian body {
+    font-family: 'Inter', 'Noto Sans SC';
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: auto;
+    color: #444;
+}

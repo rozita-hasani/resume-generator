@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap');
+
+.theme.damavand h1, .theme.damavand h2, .theme.damavand h3, .theme.damavand h4, .theme.damavand h5, .theme.damavand h6 {
+    font-family: "Karla", "Inter", 'Noto Sans SC';
+}
+
+.theme.damavand h1 {
+    font-size: 3.6rem;
+    font-weight: normal;
+    margin-top: 0;
+    text-align: left;
+}
+
+.theme.damavand h2 {
+    color: #016ef1;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.theme.damavand h3 {
+    font-size: 2rem;
+    margin-top: .5em;
+    font-weight: bold;
+}
+
+.theme.damavand h3 + p {
+    margin-top: .2rem;
+}
+
+.theme.damavand p {
+    margin-top: .5rem;
+}
+
+.theme.damavand a {
+    border-bottom: 1px dotted;
+    color: #222;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.theme.damavand hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1em 0;
+}
+
+.theme.damavand strong {
+    font-weight: bold;
+}
+
+.theme.damavand em {
+    font-style: italic;
+}
+
+.theme.damavand ul {
+    margin-top: .5em;
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.theme.damavand ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.theme.damavand ul li:before {
+    color: #016ef1;
+    content: "◦";
+    font-family: "Inter";
+    left: -1em;
+    position: absolute;
+    font-weight: bold;
+    margin-right: .5em;
+}
+
+.theme.damavand body {
+    color: #222;
+    font-family: "Karla", "Inter", 'Noto Sans SC';
+    font-size: 1.8rem !important;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: auto;
+}
