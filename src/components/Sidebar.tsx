@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Download} from "lucide-react";
+import {Download, ChevronDown} from "lucide-react";
 
 interface SidebarProps {
     generatePDF: () => void;
@@ -49,14 +49,18 @@ function ThemeSection({onThemeChange}: ThemeSectionProps) {
             <h3 className="text-base font-medium">Theme</h3>
             <label className="block text-sm font-medium py-3 text-[#5f6368]">
                 Select Theme</label>
-            <select value={theme} onChange={handleThemeChange}
-                    className="w-full text-sm text-[#3c4043] bg-gray-100 hover:bg-gray-200 hover:text-[#63676e] px-3 py-4 rounded-lg"
-                    style={{fontFamily: "'Inter', 'Noto Sans SC', sans-serif"}}>
-                <option value="Caspian">Caspian</option>
-                <option value="Damavand">Damavand</option>
-                <option value="Khalij">Khalij</option>
-                <option value="Lut">Lut</option>
-            </select>
+            <div className='relative w-full'>
+                <select value={theme} onChange={handleThemeChange}
+                        className="w-full appearance-none text-sm text-[#3c4043] bg-gray-100 hover:bg-gray-200 hover:text-[#63676e] pl-3 pr-9 py-4 rounded-lg"
+                        style={{fontFamily: "'Inter', 'Noto Sans SC', sans-serif"}}>
+                    <option value="Caspian">Caspian</option>
+                    <option value="Damavand">Damavand</option>
+                    <option value="Khalij">Khalij</option>
+                    <option value="Lut">Lut</option>
+                </select>
+                <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 transform -translate-y-1/2 text-[#3c4043]"/>
+            </div>
+
         </div>
     )
 }
@@ -103,19 +107,23 @@ function FontSection({onFontChange, onFontSizeChange, fontScale}: FontSectionPro
             <h3 className="text-base font-medium">Font</h3>
             <label className="block text-sm font-medium py-3 text-[#5f6368]">
                 Name</label>
-            <select value={font} onChange={handleFontChange}
-                    className="w-full text-sm text-[#3c4043] mb-4 bg-gray-100 hover:bg-gray-200 hover:text-[#63676e] px-3 py-4 rounded-lg"
-                    style={{fontFamily: 'Roboto, sans-serif'}}>
-                <option value="'Open Sans', sans-serif">Open Sans</option>
-                <option value="'Noto Sans', sans-serif">Noto Sans</option>
-                <option value="'Ubuntu', sans-serif">Ubuntu</option>
-            </select>
+            <div className='relative w-full mb-4'>
+                <select value={font} onChange={handleFontChange}
+                        className="w-full appearance-none text-sm text-[#3c4043] bg-gray-100 hover:bg-gray-200 hover:text-[#63676e] pl-3 pr-9 py-4 rounded-lg"
+                        style={{fontFamily: 'Roboto, sans-serif'}}>
+                    <option value="'Open Sans', sans-serif">Open Sans</option>
+                    <option value="'Noto Sans', sans-serif">Noto Sans</option>
+                    <option value="'Ubuntu', sans-serif">Ubuntu</option>
+                </select>
+                <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 transform -translate-y-1/2 text-[#3c4043]"/>
+            </div>
 
             <label className="flex justify-between text-sm font-medium py-3 text-[#5f6368]">
                 Size
                 <span>{(fontScale * baseFontSize).toFixed(1)}px</span>
             </label>
-            <input type="range" min="0.5" max="3.0" step='0.1' value={fontScale} onChange={(e) => onFontSizeChange(parseFloat(e.target.value))}
+            <input type="range" min="0.5" max="3.0" step='0.1' value={fontScale}
+                   onChange={(e) => onFontSizeChange(parseFloat(e.target.value))}
                    className="w-full accent-[#1a73e8] transition-all"/>
         </div>
     )
