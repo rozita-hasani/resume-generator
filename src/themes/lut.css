@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&display=swap');
 
+.theme.lut {
+    --fontScale: 1;
+    --lineHeightScale: 1.5;
+    --paddingScale: 20px;
+
+    font-family: "Nunito", "Inter", 'Noto Sans SC';
+    font-size: calc(16px * var(--fontScale));
+    line-height: var(--lineHeightScale);
+}
+
 .theme.lut h1, .theme.lut h2, .theme.lut h3, .theme.lut h4, .theme.lut h5, .theme.lut h6 {
     font-family: "Inika", "Inter", 'Noto Sans SC';
 }
@@ -7,91 +17,87 @@
 .theme.lut h1 {
     color: #222;
     font-weight: 800;
-    font-size: 4rem;
+    font-size: calc(4rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
 }
 
 .theme.lut h2 {
-        display: flex;
-        position: relative;
-        color: #222;
-        font-weight: 600;
-        font-size: 2.4rem;
-        margin-top: 1rem;
+    display: flex;
+    position: relative;
+    color: #222;
+    font-weight: 600;
+    font-size: calc(2.4rem * var(--fontScale));
+    margin-top: 1rem;
     }
 
-    .theme.lut h2:after {
-        align-self: end;
-        background-color: #ddd;
-        content: '';
-        flex-grow: 1;
-        height: 1px;
-        margin-bottom: 1rem;
-        margin-left: 4px;
-    }
+.theme.lut h2:after {
+    align-self: end;
+    background-color: #ddd;
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    margin-bottom: 1rem;
+    margin-left: 4px;
+}
 
-    .theme.lut h3 {
-        color: #016ef1;
-        margin-top: 2rem;
-        font-weight: 600;
-    }
+.theme.lut h3 {
+    color: #016ef1;
+    margin-top: 2rem;
+    font-weight: 600;
+}
 
-    .theme.lut h3 + p {
-        margin-top: .2rem;
-    }
+.theme.lut h3 + p {
+    margin-top: .2rem;
+}
 
-    .theme.lut p {
-        margin-top: .5rem;
-    }
+.theme.lut p {
+    margin-top: .5rem;
+}
 
-    .theme.lut a {
-        color: #222;
-        border-bottom: 1px dashed;
-        text-decoration: none !important;
-    }
+.theme.lut a {
+    color: #222;
+    border-bottom: 1px dashed;
+    text-decoration: none !important;
+}
 
-    .theme.lut hr {
-        border-top: 1px solid #ddd;
-        margin: 1em 0;
-    }
+.theme.lut hr {
+    border-top: 1px solid #ddd;
+    margin: 1em 0;
+}
 
-    .theme.lut strong {
-        color: #222;
-        font-weight: 600;
-    }
+.theme.lut strong {
+    color: #222;
+    font-weight: 600;
+}
 
-    .theme.lut em {
-        font-style: italic;
-    }
+.theme.lut em {
+    font-style: italic;
+}
 
-    .theme.lut ul {
-        padding-left: 12px;
-        margin-top: .5em;
-        list-style-type: none;
-    }
+.theme.lut ul {
+    padding-left: 12px;
+    margin-top: .5em;
+    list-style-type: none;
+}
 
-    .theme.lut ul li {
-        list-style-type: none;
-        position: relative;
-    }
+.theme.lut ul li {
+    list-style-type: none;
+    position: relative;
+}
 
-    .theme.lut ul li:before {
-        color: #016ef1;
-        font-family: "Overpass Mono";
-        font-weight: 700;
-        content: "*";
-        left: -12px;
-        position: absolute;
-    }
+.theme.lut ul li:before {
+    color: #016ef1;
+    font-family: "Overpass Mono";
+    font-weight: 700;
+    content: "*";
+    left: -12px;
+    position: absolute;
+}
 
-    .theme.lut body {
-        color: #444;
-        font-family: "Nunito", "Inter", 'Noto Sans SC';
-        font-size: 1.6rem;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 1.5;
-        margin: auto;
-        padding: 48px;
-    }
+.theme.lut body {
+    color: #444;
+    font-style: normal;
+    font-weight: normal;
+    margin: auto;
+}

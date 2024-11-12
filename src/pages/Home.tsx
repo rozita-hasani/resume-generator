@@ -8,8 +8,8 @@ const Home = () => {
     const [markdown, setMarkdown] = useState<string>();
     const [theme, setTheme] = useState<string>('Caspian');
     const [fontScale, setFontScale] = useState<number>(1);
-    const [lineHeightScale, setLineHeightScale] = useState<number>(1);
-    const [paddingScale, setPaddingScale] = useState<number>(1);
+    const [lineHeightScale, setLineHeightScale] = useState<number>(1.5);
+    const [paddingScale, setPaddingScale] = useState<number>(20);
     const [font, setFont] = useState<string>("'Inter', 'Noto Sans SC', sans-serif");
 
     const themeFontMapping: { [key: string]: string } = {
@@ -24,34 +24,31 @@ const Home = () => {
 
     // Update CSS variable for fontScale in the preview
     useEffect(() => {
-        const previewContent = document.getElementById('previewContent');
-        if (previewContent) {
-            console.log("Font scale changed", fontScale);
-            previewContent.style.setProperty('--fontScale', fontScale.toString());
+        const previewContainer = document.getElementById('previewContainer');
+        if (previewContainer) {
+            previewContainer.style.setProperty('--fontScale', fontScale.toString());
         }
     }, [fontScale]);
 
     // Update CSS variable for lineHeightScale in the preview
     useEffect(() => {
-        const previewContent = document.getElementById('previewContent');
-        if (previewContent) {
-            console.log("Line height scale changed", lineHeightScale);
-            previewContent.style.setProperty('--lineHeightScale', lineHeightScale.toString());
+        const previewContainer = document.getElementById('previewContainer');
+        if (previewContainer) {
+            previewContainer.style.setProperty('--lineHeightScale', lineHeightScale.toString());
         }
     }, [lineHeightScale]);
 
     // Update CSS variable for paddingScale in the preview
     useEffect(() => {
-        const previewContent = document.getElementById('previewContent');
-        if (previewContent) {
-            console.log("Padding scale changed", paddingScale);
-            previewContent.style.setProperty('--paddingScale', paddingScale.toString());
+        const previewContainer = document.getElementById('previewContainer');
+        if (previewContainer) {
+            previewContainer.style.setProperty('--paddingScale', `${paddingScale}px`);
         }
     }, [paddingScale]);
 
     const generatePDF = () => {
-        const previewContent = document.getElementById('previewContent');
-        if (previewContent) {
+        const previewContainer = document.getElementById('previewContainer');
+        if (previewContainer) {
             const doc = new jsPDF({
                 unit: 'pt',
                 format: 'a4',
@@ -59,7 +56,7 @@ const Home = () => {
             });
 
             // Generate PDF using content from the preview
-            doc.html(previewContent, {
+            doc.html(previewContainer, {
                 callback: function (pdf) {
                     pdf.save('resume.pdf');
                 },
@@ -99,11 +96,11 @@ const Home = () => {
 
                     {/* Preview */}
                     <div
-                        id="previewContent"
-                        className={`my-4 mr-2 preview w-1/2 relative min-h-full h-screen overflow-auto theme ${theme.toLowerCase()}`}
+                        id="previewContainer"
+                        className={`my-4 mr-2 w-1/2 relative min-h-full h-screen overflow-auto theme ${theme.toLowerCase()}`}
                         style={{fontFamily: font,}}
                     >
-                        <Preview className="bg-white border border-gray-200" content={markdown}/>
+                        <Preview className="previewContent bg-white border border-gray-200" content={markdown}/>
                     </div>
                 </div>
             </div>

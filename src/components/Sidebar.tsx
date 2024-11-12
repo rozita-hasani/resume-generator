@@ -69,6 +69,7 @@ interface FontSectionProps {
 
 function FontSection({onFontChange, onFontSizeChange, fontScale}: FontSectionProps) {
     const [font, setFont] = useState<string>("'Open Sans', sans-serif");
+    const baseFontSize = 16;
 
     const fonts: { [key: string]: string } = {
         "'Open Sans', sans-serif": 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap',
@@ -112,9 +113,9 @@ function FontSection({onFontChange, onFontSizeChange, fontScale}: FontSectionPro
 
             <label className="flex justify-between text-sm font-medium py-3 text-[#5f6368]">
                 Size
-                <span>{fontScale}</span>
+                <span>{(fontScale * baseFontSize).toFixed(1)}px</span>
             </label>
-            <input type="range" min="0.1" max="5.0" step='0.1' value={fontScale} onChange={(e) => onFontSizeChange(parseFloat(e.target.value))}
+            <input type="range" min="0.5" max="3.0" step='0.1' value={fontScale} onChange={(e) => onFontSizeChange(parseFloat(e.target.value))}
                    className="w-full accent-[#1a73e8] transition-all"/>
         </div>
     )
@@ -135,14 +136,14 @@ function LayoutSection({onLineHeightChange, onPaddingChange, lineHeightScale, pa
                 Line Height
                 <span>{lineHeightScale}</span>
             </label>
-            <input type="range" min="0.1" max="2" step="0.1" value={lineHeightScale} onChange={(e) => onLineHeightChange(parseFloat(e.target.value))}
+            <input type="range" min="1.0" max="3.0" step="0.1" value={lineHeightScale} onChange={(e) => onLineHeightChange(parseFloat(e.target.value))}
                    className="w-full mb-4 accent-[#1a73e8] transition-all"/>
 
             <label className="flex justify-between text-sm font-medium py-3 text-[#5f6368]">
                 Page Padding
-                <span>{paddingScale}</span>
+                <span>{paddingScale}px</span>
             </label>
-            <input type="range" min="0.1" max="2" step='0.1' value={paddingScale} onChange={(e) => onPaddingChange(parseFloat(e.target.value))}
+            <input type="range" min="0" max="40" step='2' value={paddingScale} onChange={(e) => onPaddingChange(parseFloat(e.target.value))}
                    className="w-full accent-[#1a73e8] transition-all"/>
         </div>
     )

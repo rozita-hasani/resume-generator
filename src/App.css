@@ -4,14 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-#previewContent {
-    --fontScale: 1;
-    --lineHeightScale: 1;
-    --paddingScale: 1;
-
-    font-size: calc(16px * var(--fontScale));
-    line-height: calc(1.5 * var(--lineHeightScale));
-    padding: calc(10px * var(--paddingScale));
+#previewContainer .previewContent {
+    padding: var(--paddingScale);
 }
 
 
@@ -26,7 +20,7 @@
         background: white !important;
     }
 
-    #previewContent {
+    #previewContainer {
         width: 100% !important;
         border:none !important;
         background:white;

@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&family=Poppins:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
 
+.theme.khalij {
+    --fontScale: 1;
+    --lineHeightScale: 1.5;
+    --paddingScale: 20px;
+
+    font-family: "Work Sans", "Inter", 'Noto Sans SC';
+    font-size: calc(16px * var(--fontScale));
+    line-height: var(--lineHeightScale);
+}
+
 .theme.khalij h1, .theme.khalij h2, .theme.khalij h3, .theme.khalij h4, .theme.khalij h5, .theme.khalij h6 {
     font-family: "Poppins","Inter",'Noto Sans SC';
 }
 
 .theme.khalij h1 {
     font-weight: normal;
-    font-size: 3.6rem;
+    font-size: calc(3.6rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
 }
@@ -17,7 +27,7 @@
     display: inline-block;
     position: relative;
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: calc(2.4rem * var(--fontScale));
     margin-top: 1em;
 }
 
@@ -75,8 +85,5 @@
 
 .theme.khalij body {
     color: #222;
-    font-family: "Work Sans", "Inter", 'Noto Sans SC';
-    font-size: 1.6rem;
     font-style: normal;
-    line-height: 1.5;
 }

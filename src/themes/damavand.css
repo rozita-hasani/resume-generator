@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap');
 
-.theme.damavand h1, .theme.damavand h2, .theme.damavand h3, .theme.damavand h4, .theme.damavand h5, .theme.damavand h6 {
+.theme.damavand {
+    --fontScale: 1;
+    --lineHeightScale: 1.5;
+    --paddingScale: 20px;
+
     font-family: "Karla", "Inter", 'Noto Sans SC';
+    font-size: calc(18px * var(--fontScale));
+    line-height: var(--lineHeightScale);
 }
 
 .theme.damavand h1 {
-    font-size: 3.6rem;
+    font-size: calc(3.6rem * var(--fontScale));
     font-weight: normal;
     margin-top: 0;
     text-align: left;
@@ -14,13 +20,13 @@
 .theme.damavand h2 {
     color: #016ef1;
     text-transform: uppercase;
-    font-size: 2.4rem;
+    font-size: calc(2.4rem * var(--fontScale));
     margin-top: 1em;
     font-weight: bold;
 }
 
 .theme.damavand h3 {
-    font-size: 2rem;
+    font-size: calc(2rem * var(--fontScale));
     margin-top: .5em;
     font-weight: bold;
 }
@@ -77,10 +83,7 @@
 
 .theme.damavand body {
     color: #222;
-    font-family: "Karla", "Inter", 'Noto Sans SC';
-    font-size: 1.8rem !important;
     font-style: normal;
     font-weight: normal;
-    line-height: 1.5;
     margin: auto;
 }
