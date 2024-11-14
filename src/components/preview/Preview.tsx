@@ -2,15 +2,15 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 interface PreviewProps {
-    content: string | undefined;
-    className: string | undefined;
+    content?: string;
+    className?: string;
 }
 
-const Preview = ({content,className}: PreviewProps) => {
+const Preview = ({content = '# Hello World', className}: PreviewProps) => {
     return (
         <div className={`prose max-w-none text-[#1c2024] p-3 ${className}`}>
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {content ? (content.replace(/\\/g, "")) : '# Hello World'}
+                {content.replace(/\\/g, "")}
             </ReactMarkdown>
         </div>
     );

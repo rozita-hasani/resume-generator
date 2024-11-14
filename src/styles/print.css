@@ -1,0 +1,25 @@
+@media print {
+    /* All your print styles go here */
+    .editor, .sidebar {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+    }
+
+    #previewContainer {
+        width: 100% !important;
+        border: none !important;
+        background: white;
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    .main-content {
+        padding: 0 !important;
+        overflow: hidden;
+        display: block;
+        flex-grow: initial;
+    }
+}

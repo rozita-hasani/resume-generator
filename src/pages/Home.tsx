@@ -1,8 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
-import { Editor, Sidebar, Preview } from '../components';
-import "../themes/index.css";
-import '../App.css';
-import jsPDF from 'jspdf';
+import {useState, useRef, useEffect} from 'react';
+import {Editor, Sidebar, Preview} from '../components';
+import "../styles/themes/index.css";
+import '../styles/print.css'
 
 const Home = () => {
     const [markdown, setMarkdown] = useState<string>();
@@ -20,48 +19,21 @@ const Home = () => {
     };
 
     const mainScrollContainerRef = useRef<HTMLDivElement>(null);
+    const previewContainerRef = useRef<HTMLDivElement>(null);
 
-
-    // Update CSS variable for fontScale in the preview
+    // Update CSS variables in the previewContainer
     useEffect(() => {
-        const previewContainer = document.getElementById('previewContainer');
+        const previewContainer = previewContainerRef.current;
         if (previewContainer) {
             previewContainer.style.setProperty('--fontScale', fontScale.toString());
-        }
-    }, [fontScale]);
-
-    // Update CSS variable for lineHeightScale in the preview
-    useEffect(() => {
-        const previewContainer = document.getElementById('previewContainer');
-        if (previewContainer) {
             previewContainer.style.setProperty('--lineHeightScale', lineHeightScale.toString());
-        }
-    }, [lineHeightScale]);
-
-    // Update CSS variable for paddingScale in the preview
-    useEffect(() => {
-        const previewContainer = document.getElementById('previewContainer');
-        if (previewContainer) {
             previewContainer.style.setProperty('--paddingScale', `${paddingScale}px`);
         }
-    }, [paddingScale]);
+    }, [fontScale, lineHeightScale, paddingScale]);
 
-    const generatePDF = () => {
-        const previewContainer = document.getElementById('previewContainer');
-        if (previewContainer) {
-            const doc = new jsPDF({
-                unit: 'pt',
-                format: 'a4',
-                orientation: 'portrait',
-            });
-
-            // Generate PDF using content from the preview
-            doc.html(previewContainer, {
-                callback: function (pdf) {
-                    pdf.save('resume.pdf');
-                },
-            });
-        }
+    const handleThemeChange = (selectedTheme: string) => {
+        setTheme(selectedTheme);
+        setFont(themeFontMapping[selectedTheme]);
     };
 
     // Scroll synchronization between editor and preview
@@ -72,43 +44,36 @@ const Home = () => {
         }
     };
 
-    const handleThemeChange = (selectedTheme: string) => {
-        setTheme(selectedTheme);
-        setFont(themeFontMapping[selectedTheme]);
+
+    // Handle print action to export as PDF
+    const handlePrint = () => {
+                window.print();
     };
 
     return (
-        <div className=" w-full h-screen bg-gray-100">
-            {/* Main Content Area */}
+        <div className="w-full h-full min-h-screen bg-gray-100">
             <div
-                className="main-content h-full overflow-auto gap-3 pr-[290px]"
+                className="main-content gap-3 pr-[310px] py-4"
                 ref={mainScrollContainerRef}
                 onScroll={handleScroll}
             >
-                <div className="flex gap-3 justify-center items-start w-full h-screen">
-                    {/* Editor */}
-                    <div
-                        id="editor"
-                        className="editor my-4 ml-4 relative w-1/2 min-h-full h-screen overflow-auto"
-                    >
-                        <Editor className="bg-white border border-gray-200" markdown={markdown} onChange={setMarkdown}/>
+                <div className="flex gap-3 justify-center items-start w-full">
+                    <div id="editor" className="editor ml-4 relative w-1/2 ">
+                        <Editor className="bg-white border border-gray-200 " markdown={markdown} onChange={setMarkdown}/>
                     </div>
 
-                    {/* Preview */}
-                    <div
-                        id="previewContainer"
-                        className={`my-4 mr-2 w-1/2 relative min-h-full h-screen overflow-auto theme ${theme.toLowerCase()}`}
-                        style={{fontFamily: font,}}
+                    <div id="previewContainer"
+                         ref={previewContainerRef}
+                         className={`mr-2 w-1/2 relative overflow-auto theme ${theme.toLowerCase()}`}
+                         style={{fontFamily: font}}
                     >
-                        <Preview className="previewContent bg-white border border-gray-200" content={markdown}/>
+                        <Preview className="previewContent bg-white border border-gray-200 " content={markdown}/>
                     </div>
                 </div>
             </div>
 
-
-            {/* Sidebar with Options */}
             <Sidebar
-                generatePDF={generatePDF}
+                handlePrint={handlePrint}
                 onThemeChange={handleThemeChange}
                 onFontChange={setFont}
                 onFontSizeChange={setFontScale}

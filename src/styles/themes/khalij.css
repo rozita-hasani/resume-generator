@@ -1,17 +1,27 @@
+/* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&family=Poppins:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
 
-.theme.khalij {
+/* Global Variables */
+:root {
     --fontScale: 1;
     --lineHeightScale: 1.5;
     --paddingScale: 20px;
+}
 
+/* Khalij Theme Styles */
+.theme.khalij {
     font-family: "Work Sans", "Inter", 'Noto Sans SC';
     font-size: calc(16px * var(--fontScale));
     line-height: var(--lineHeightScale);
+    color: #222;
+}
+
+.theme.khalij .previewContent {
+    padding: var(--paddingScale);
 }
 
 .theme.khalij h1, .theme.khalij h2, .theme.khalij h3, .theme.khalij h4, .theme.khalij h5, .theme.khalij h6 {
-    font-family: "Poppins","Inter",'Noto Sans SC';
+    font-family: "Poppins", "Inter", 'Noto Sans SC';
 }
 
 .theme.khalij h1 {
@@ -22,22 +32,18 @@
 }
 
 .theme.khalij h2 {
-    border-bottom: 1px solid #016ef1;
-    border-bottom-style: dashed;
-    display: inline-block;
-    position: relative;
+    border-bottom: 1px dashed #016ef1;
     font-weight: 700;
     font-size: calc(2.4rem * var(--fontScale));
     margin-top: 1em;
+    text-transform: uppercase;
+    position: relative;
 }
 
 .theme.khalij h3 {
+    font-size: calc(2rem * var(--fontScale));
     margin-top: .5rem;
     font-weight: 600;
-}
-
-.theme.khalij h3 + p {
-    margin-top: .2rem;
 }
 
 .theme.khalij p {
@@ -80,10 +86,4 @@
     left: -16px;
     position: absolute;
     margin-right: .5em;
-    margin-right: .5em;
-}
-
-.theme.khalij body {
-    color: #222;
-    font-style: normal;
 }
