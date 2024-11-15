@@ -1,13 +1,6 @@
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&display=swap');
 
-/* Lut Theme Variables */
-:root {
-    --fontScale: 1;
-    --lineHeightScale: 1.5;
-    --paddingScale: 20px;
-}
-
 /* Lut Theme Styles */
 .theme.lut {
     font-family: "Nunito", "Inter", 'Noto Sans SC';
@@ -27,7 +20,7 @@
 .theme.lut h1 {
     color: #222;
     font-weight: 800;
-    font-size: calc(4rem * var(--fontScale));
+    font-size: calc(2.5rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
 }
@@ -37,13 +30,12 @@
     position: relative;
     color: #222;
     font-weight: 600;
-    font-size: calc(2.4rem * var(--fontScale));
-    margin-top: 1rem;
+    font-size: calc(1.5rem * var(--fontScale));
+    margin-top: 0.5em;
 }
 
 .theme.lut h2:after {
     align-self: end;
-    background-color: #ddd;
     content: '';
     flex-grow: 1;
     height: 1px;
@@ -53,8 +45,9 @@
 
 .theme.lut h3 {
     color: #016ef1;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     font-weight: 600;
+    font-size: calc(1.25rem * var(--fontScale));
 }
 
 .theme.lut h3 + p {
@@ -83,6 +76,7 @@
 
 .theme.lut em {
     font-style: italic;
+    color: #444;
 }
 
 .theme.lut ul {

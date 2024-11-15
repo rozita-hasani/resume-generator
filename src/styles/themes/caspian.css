@@ -1,13 +1,6 @@
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Noto+Sans:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&family=Inter:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&family=Poppins:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
 
-/* Global Variables */
-:root {
-    --fontScale: 1;
-    --lineHeightScale: 1.5;
-    --paddingScale: 20px;
-}
-
 /* Caspian Theme Styles */
 .theme.caspian {
     font-family: 'Inter', 'Noto Sans SC';
@@ -22,7 +15,7 @@
 
 .theme.caspian h1 {
     font-weight: 800;
-    font-size: calc(4rem * var(--fontScale));
+    font-size: calc(2.25rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
 }
@@ -33,7 +26,8 @@
     text-transform: uppercase;
     color: #222;
     font-weight: 600;
-    font-size: calc(2.4rem * var(--fontScale));
+    font-size: calc(1.5rem * var(--fontScale));
+    margin-top: 0.5em;
 }
 
 .theme.caspian h2:before {
@@ -47,8 +41,9 @@
 }
 
 .theme.caspian h3 {
+    font-size: calc(1.25rem * var(--fontScale));
     color: #222;
-    margin-top: 2rem;
+    margin-top: 0.5em;
     font-weight: 600;
 }
 
@@ -78,6 +73,7 @@
 
 .theme.caspian em {
     font-style: italic;
+    color: #444;
 }
 
 .theme.caspian ul {

@@ -2,3 +2,10 @@
 @import "khalij.css";
 @import "caspian.css";
 @import "damavand.css";
+
+/* Global Variables */
+:root {
+    --fontScale: 1;
+    --lineHeightScale: 1.5;
+    --paddingScale: 20px;
+}

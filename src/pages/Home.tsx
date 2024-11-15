@@ -2,13 +2,14 @@ import {useState, useRef, useEffect} from 'react';
 import {Editor, Sidebar, Preview} from '../components';
 import "../styles/themes/index.css";
 import '../styles/print.css'
+import '../styles/global.css'
 
 const Home = () => {
     const [markdown, setMarkdown] = useState<string>();
     const [theme, setTheme] = useState<string>('Caspian');
     const [fontScale, setFontScale] = useState<number>(1);
     const [lineHeightScale, setLineHeightScale] = useState<number>(1.5);
-    const [paddingScale, setPaddingScale] = useState<number>(20);
+    const [paddingScale, setPaddingScale] = useState<number>(24);
     const [font, setFont] = useState<string>("'Inter', 'Noto Sans SC', sans-serif");
 
     const themeFontMapping: { [key: string]: string } = {
@@ -47,27 +48,28 @@ const Home = () => {
 
     // Handle print action to export as PDF
     const handlePrint = () => {
-                window.print();
+        window.print();
     };
 
     return (
         <div className="w-full h-full min-h-screen bg-gray-100">
             <div
-                className="main-content gap-3 pr-[310px] py-4"
+                className="main-content gap-3 pr-[310px] h-full"
                 ref={mainScrollContainerRef}
                 onScroll={handleScroll}
             >
-                <div className="flex gap-3 justify-center items-start w-full">
-                    <div id="editor" className="editor ml-4 relative w-1/2 ">
-                        <Editor className="bg-white border border-gray-200 " markdown={markdown} onChange={setMarkdown}/>
+                <div className="flex justify-center items-start w-full h-screen" >
+                    <div id="editor" className="editor m-4 relative w-1/2 custom-scrollbar overflow-auto bg-white border border-gray-200" style={{ height: 'calc(100vh - 32px)' }}>
+                        <Editor className=" " markdown={markdown} onChange={setMarkdown}/>
                     </div>
 
                     <div id="previewContainer"
                          ref={previewContainerRef}
-                         className={`mr-2 w-1/2 relative overflow-auto theme ${theme.toLowerCase()}`}
-                         style={{fontFamily: font}}
+                         className={`my-4 mr-2 w-1/2 relative overflow-auto custom-scrollbar h-full theme bg-white border border-gray-200 ${theme.toLowerCase()}`}
+                         style={{fontFamily: font,
+                             height: 'calc(100vh - 32px)'}}
                     >
-                        <Preview className="previewContent bg-white border border-gray-200 " content={markdown}/>
+                        <Preview className="previewContent " content={markdown}/>
                     </div>
                 </div>
             </div>
