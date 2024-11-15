@@ -1,0 +1,31 @@
+@import "print.css";
+@import "themes/caspian.css";
+@import "themes/damavand.css";
+@import "themes/khalij.css";
+@import "themes/lut.css";
+
+/* Global Variables */
+:root {
+    --fontScale: 1;
+    --lineHeightScale: 1.5;
+    --paddingScale: 20px;
+}
+
+.previewContainer {
+    padding: var(--paddingScale);
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0bcbc;
+}

@@ -1,8 +1,6 @@
 import {useState, useRef, useEffect} from 'react';
 import {Editor, Sidebar, Preview} from '../components';
-import "../styles/themes/index.css";
-import '../styles/print.css'
-import '../styles/global.css'
+import '../styles/main.css'
 
 const Home = () => {
     const [markdown, setMarkdown] = useState<string>();
@@ -58,19 +56,9 @@ const Home = () => {
                 ref={mainScrollContainerRef}
                 onScroll={handleScroll}
             >
-                <div className="flex justify-center items-start w-full h-screen" >
-                    <div id="editor" className="editor m-4 relative w-1/2 custom-scrollbar overflow-auto bg-white border border-gray-200" style={{ height: 'calc(100vh - 32px)' }}>
-                        <Editor className=" " markdown={markdown} onChange={setMarkdown}/>
-                    </div>
-
-                    <div id="previewContainer"
-                         ref={previewContainerRef}
-                         className={`my-4 mr-2 w-1/2 relative overflow-auto custom-scrollbar h-full theme bg-white border border-gray-200 ${theme.toLowerCase()}`}
-                         style={{fontFamily: font,
-                             height: 'calc(100vh - 32px)'}}
-                    >
-                        <Preview className="previewContent " content={markdown}/>
-                    </div>
+                <div className="flex justify-center items-start w-full h-screen">
+                    <Editor markdown={markdown} onChange={setMarkdown}/>
+                    <Preview content={markdown} theme={theme} font={font} previewContainerRef={previewContainerRef}/>
                 </div>
             </div>
 

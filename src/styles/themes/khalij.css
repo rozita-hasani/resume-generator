@@ -9,10 +9,6 @@
     color: #222;
 }
 
-.theme.khalij .previewContent {
-    padding: var(--paddingScale);
-}
-
 .theme.khalij h1, .theme.khalij h2, .theme.khalij h3, .theme.khalij h4, .theme.khalij h5, .theme.khalij h6 {
     font-family: "Poppins", "Inter", 'Noto Sans SC';
 }

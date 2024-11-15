@@ -6,7 +6,6 @@ import './editor.css';
 interface EditorProps {
     markdown?: string;
     onChange: (value: string) => void;
-    className: string;
 }
 
 const defaultResume = `
@@ -23,9 +22,13 @@ Graz, Austria
 
 `;
 
-const Editor = forwardRef<HTMLDivElement, EditorProps>(({className, markdown, onChange}, ref) => {
+const Editor = forwardRef<HTMLDivElement, EditorProps>(({markdown, onChange}, ref) => {
     return (
-        <div ref={ref} className={className}>
+        <div
+            ref={ref}
+            className="editor m-4 relative w-1/2 custom-scrollbar overflow-auto bg-white border border-gray-200"
+            style={{height: 'calc(100vh - 32px)'}}
+        >
             <MDXEditor
                 markdown={markdown ? markdown : defaultResume}
                 onChange={onChange ? (newMarkdown) => onChange(newMarkdown || '') : undefined}

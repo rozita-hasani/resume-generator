@@ -19,7 +19,7 @@
         display: none !important;
     }
 
-    #previewContainer {
+    .previewContainer {
         width: 100% !important;
         border: none !important;
         background: white;
@@ -28,11 +28,7 @@
         page-break-inside: avoid;
     }
 
-    .previewContent {
-        border: none !important;
-    }
-
-    #previewContainer > * {
+    .previewContainer > * {
         page-break-inside: avoid;
     }
 

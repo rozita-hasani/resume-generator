@@ -9,10 +9,6 @@
     color: #444;
 }
 
-.theme.lut .previewContent {
-    padding: var(--paddingScale);
-}
-
 .theme.lut h1, .theme.lut h2, .theme.lut h3, .theme.lut h4, .theme.lut h5, .theme.lut h6 {
     font-family: "Inika", "Inter", 'Noto Sans SC';
 }

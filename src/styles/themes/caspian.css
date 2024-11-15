@@ -9,10 +9,6 @@
     color: #444;
 }
 
-.theme.caspian .previewContent {
-    padding: var(--paddingScale);
-}
-
 .theme.caspian h1 {
     font-weight: 800;
     font-size: calc(2.25rem * var(--fontScale));
