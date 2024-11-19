@@ -1,19 +1,19 @@
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&display=swap');
 
-/* Lut Theme Styles */
-.theme.lut {
+/* Mashhad Theme Styles */
+.theme.mashhad {
     font-family: "Nunito", "Inter", 'Noto Sans SC';
     font-size: calc(16px * var(--fontScale));
     line-height: var(--lineHeightScale);
     color: #444;
 }
 
-.theme.lut h1, .theme.lut h2, .theme.lut h3, .theme.lut h4, .theme.lut h5, .theme.lut h6 {
+.theme.mashhad h1, .theme.mashhad h2, .theme.mashhad h3, .theme.mashhad h4, .theme.mashhad h5, .theme.mashhad h6 {
     font-family: "Inika", "Inter", 'Noto Sans SC';
 }
 
-.theme.lut h1 {
+.theme.mashhad h1 {
     color: #222;
     font-weight: 800;
     font-size: calc(2.5rem * var(--fontScale));
@@ -21,7 +21,7 @@
     text-align: left;
 }
 
-.theme.lut h2 {
+.theme.mashhad h2 {
     display: flex;
     position: relative;
     color: #222;
@@ -30,7 +30,7 @@
     margin-top: 0.5em;
 }
 
-.theme.lut h2:after {
+.theme.mashhad h2:after {
     align-self: end;
     content: '';
     flex-grow: 1;
@@ -39,54 +39,54 @@
     margin-left: 4px;
 }
 
-.theme.lut h3 {
+.theme.mashhad h3 {
     color: #016ef1;
     margin-top: 0.5rem;
     font-weight: 600;
     font-size: calc(1.25rem * var(--fontScale));
 }
 
-.theme.lut h3 + p {
+.theme.mashhad h3 + p {
     margin-top: .2rem;
 }
 
-.theme.lut p {
+.theme.mashhad p {
     margin-top: .5rem;
 }
 
-.theme.lut a {
+.theme.mashhad a {
     color: #222;
     border-bottom: 1px dashed;
     text-decoration: none !important;
 }
 
-.theme.lut hr {
+.theme.mashhad hr {
     border-top: 1px solid #ddd;
     margin: 1em 0;
 }
 
-.theme.lut strong {
+.theme.mashhad strong {
     color: #222;
     font-weight: 600;
 }
 
-.theme.lut em {
+.theme.mashhad em {
     font-style: italic;
     color: #444;
 }
 
-.theme.lut ul {
+.theme.mashhad ul {
     padding-left: 12px;
     margin-top: .5em;
     list-style-type: none;
 }
 
-.theme.lut ul li {
+.theme.mashhad ul li {
     list-style-type: none;
     position: relative;
 }
 
-.theme.lut ul li:before {
+.theme.mashhad ul li:before {
     color: #016ef1;
     font-family: "Overpass Mono";
     font-weight: 700;

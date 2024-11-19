@@ -4,17 +4,17 @@ import '../styles/main.css'
 
 const Index = () => {
     const [markdown, setMarkdown] = useState<string>();
-    const [theme, setTheme] = useState<string>('Caspian');
+    const [theme, setTheme] = useState<string>('Tehran');
     const [fontScale, setFontScale] = useState<number>(1);
     const [lineHeightScale, setLineHeightScale] = useState<number>(1.5);
     const [paddingScale, setPaddingScale] = useState<number>(24);
     const [font, setFont] = useState<string>("'Inter', 'Noto Sans SC', sans-serif");
 
     const themeFontMapping: { [key: string]: string } = {
-        Caspian: "'Inter', 'Noto Sans SC', sans-serif",
-        Damavand: "'Poppins', 'Inter', 'Noto Sans SC', sans-serif",
-        Khalij: "'Nunito', 'Inter', 'Noto Sans SC', sans-serif",
-        Lut: "'Work Sans', 'Inter', 'Noto Sans SC', sans-serif"
+        Tehran: "'Inter', 'Noto Sans SC', sans-serif",
+        Isfahan: "'Poppins', 'Inter', 'Noto Sans SC', sans-serif",
+        Shiraz: "'Nunito', 'Inter', 'Noto Sans SC', sans-serif",
+        Mashhad: "'Work Sans', 'Inter', 'Noto Sans SC', sans-serif"
     };
 
     const mainScrollContainerRef = useRef<HTMLDivElement>(null);

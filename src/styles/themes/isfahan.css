@@ -1,22 +1,22 @@
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap');
 
-/* Damavand Theme Styles */
-.theme.damavand {
+/* Isfahan Theme Styles */
+.theme.isfahan {
     font-family: "Karla", "Inter", "Noto Sans SC";
     font-size: calc(18px * var(--fontScale));
     line-height: var(--lineHeightScale);
     color: #222;
 }
 
-.theme.damavand h1 {
+.theme.isfahan h1 {
     font-weight: normal;
     font-size: calc(2.25rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
 }
 
-.theme.damavand h2 {
+.theme.isfahan h2 {
     color: #016ef1;
     text-transform: uppercase;
     font-size: calc(1.5rem * var(--fontScale));
@@ -24,40 +24,40 @@
     font-weight: bold;
 }
 
-.theme.damavand h3 {
+.theme.isfahan h3 {
     font-size: calc(1.25rem * var(--fontScale));
     margin-top: .5em;
     font-weight: bold;
 }
 
-.theme.damavand p {
+.theme.isfahan p {
     margin-top: .5rem;
 }
 
-.theme.damavand a {
+.theme.isfahan a {
     border-bottom: 1px dotted;
     text-decoration: none;
 }
 
-.theme.damavand strong {
+.theme.isfahan strong {
     font-weight: bold;
 }
 
-.theme.damavand em {
+.theme.isfahan em {
     font-style: italic;
 }
 
-.theme.damavand ul {
+.theme.isfahan ul {
     margin-top: .5em;
     list-style-type: none;
     padding-left: 1em;
 }
 
-.theme.damavand ul li {
+.theme.isfahan ul li {
     position: relative;
 }
 
-.theme.damavand ul li:before {
+.theme.isfahan ul li:before {
     content: "◦";
     color: #016ef1;
     font-family: "Inter";
@@ -66,7 +66,7 @@
     font-weight: bold;
 }
 
-.theme.damavand hr {
+.theme.isfahan hr {
     border: none;
     border-top: 1px solid #ddd;
     margin: 1em 0;

@@ -1,26 +1,26 @@
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&family=Poppins:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
 
-/* Khalij Theme Styles */
-.theme.khalij {
+/* Shiraz Theme Styles */
+.theme.shiraz {
     font-family: "Work Sans", "Inter", 'Noto Sans SC';
     font-size: calc(16px * var(--fontScale));
     line-height: var(--lineHeightScale);
     color: #222;
 }
 
-.theme.khalij h1, .theme.khalij h2, .theme.khalij h3, .theme.khalij h4, .theme.khalij h5, .theme.khalij h6 {
+.theme.shiraz h1, .theme.shiraz h2, .theme.shiraz h3, .theme.shiraz h4, .theme.shiraz h5, .theme.shiraz h6 {
     font-family: "Poppins", "Inter", 'Noto Sans SC';
 }
 
-.theme.khalij h1 {
+.theme.shiraz h1 {
     font-weight: normal;
     font-size: calc(2.25rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
 }
 
-.theme.khalij h2 {
+.theme.shiraz h2 {
     border-bottom: 1px dashed #016ef1;
     font-weight: 700;
     font-size: calc(1.5rem * var(--fontScale));
@@ -30,47 +30,47 @@
     display: inline-block;
 }
 
-.theme.khalij h3 {
+.theme.shiraz h3 {
     font-size: calc(1.25rem * var(--fontScale));
     margin-top: 0.5rem;
     font-weight: 600;
 }
 
-.theme.khalij p {
+.theme.shiraz p {
     margin-top: .5rem;
 }
 
-.theme.khalij a {
+.theme.shiraz a {
     color: #222;
     font-weight: 500;
     text-decoration: underline;
 }
 
-.theme.khalij hr {
+.theme.shiraz hr {
     border-top: 1px dashed #016ef1;
     margin: 1em 0;
 }
 
-.theme.khalij strong {
+.theme.shiraz strong {
     font-weight: 500;
 }
 
-.theme.khalij em {
+.theme.shiraz em {
     font-style: italic;
 }
 
-.theme.khalij ul {
+.theme.shiraz ul {
     padding-left: 16px;
     margin-top: .5em;
     list-style-type: none;
 }
 
-.theme.khalij ul li {
+.theme.shiraz ul li {
     list-style-type: none;
     position: relative;
 }
 
-.theme.khalij ul li:before {
+.theme.shiraz ul li:before {
     font-weight: bold;
     content: '-';
     left: -16px;
