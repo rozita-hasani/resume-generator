@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {SectionWrapper} from "./SectionWrapper.tsx";
+import {SidebarSection} from "./SidebarSection.tsx";
 import {ChevronDown} from "lucide-react";
 import {Slider} from "./Slider.tsx";
 
@@ -42,7 +42,7 @@ export function FontSection({onFontChange, onFontSizeChange, fontScale}: FontSec
     };
 
     return (
-        <SectionWrapper title="Font">
+        <SidebarSection title="Font">
             <div className='relative w-full mb-4'>
                 <label className="block text-sm font-medium py-3 text-[#5f6368]">Name</label>
                 <select value={font} onChange={handleFontChange}
@@ -58,6 +58,6 @@ export function FontSection({onFontChange, onFontSizeChange, fontScale}: FontSec
             <Slider label="Size" value={fontScale} min={0.5} max={3.0} step={0.1}
                     onChange={(e) => onFontSizeChange(parseFloat(e.target.value))}
                     currentValue={`${(fontScale * baseFontSize).toFixed(1)}px`}/>
-        </SectionWrapper>
+        </SidebarSection>
     )
 }

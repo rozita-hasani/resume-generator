@@ -2,7 +2,7 @@ import {useState, useRef, useEffect} from 'react';
 import {Editor, Sidebar, Preview} from '../components';
 import '../styles/main.css'
 
-const Home = () => {
+const Index = () => {
     const [markdown, setMarkdown] = useState<string>();
     const [theme, setTheme] = useState<string>('Caspian');
     const [fontScale, setFontScale] = useState<number>(1);
@@ -77,4 +77,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Index;
