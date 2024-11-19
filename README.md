@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# Resume Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+Resume Editor is an open-source project that helps users create professional resumes. You write your resume in **markdown format**, and the editor lets you preview, apply different **themes**, customize, and save it as a **PDF**.
 
-Currently, two official plugins are available:
+## Features
+- **Write in Markdown**: Use simple markdown to write your resume content.
+- **Live Preview**: See your resume as you type, so you know how it looks.
+- **Different Templates**: Choose from multiple styles to make your resume unique.
+- **Custom Fonts and Layout**: Adjust fonts, sizes, line heights, and more to fit your personal style.
+- **Download as PDF**: Save your resume as a PDF document that’s ready to share.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [React DOM](https://reactjs.org/docs/react-dom.html)
+- [React Markdown](https://github.com/remarkjs/react-markdown)
+- [MDXEditor](https://github.com/mdxeditor/editor)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
 
-## Expanding the ESLint configuration
+## Screenshots
+Here are some examples of resumes created with this tool:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+| ![Resume Editor Screenshot](./public/mashhad-resume.jpg)        | ![Resume Example](./public/tehran-resume.jpg) |
+|------------------------------------------------|------------------------------------------------|
+| ![Resume Example](./public/isfahan-resume.jpg) | ![Resume Example](./public/shiraz-resume.jpg)  |
 
-- Configure the top-level `parserOptions` property like this:
+## Quick Start
+To run the project locally:
+([link](...))
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Contributing
+We welcome contributions! To contribute:
+- Fork the repository
+- Create your branch (git checkout -b feature/YourFeature)
+- Commit changes (git commit -am 'Add feature')
+- Push the branch (git push origin feature/YourFeature)
+- Create a Pull Request
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## License
+Licensed under the MIT License.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contact
+For questions or support, please contact [rozita.hasani.work@gmail.com](mailto:rozita.hasani.work@gmail.com).
