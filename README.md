@@ -23,9 +23,9 @@ Resume Editor is an open-source project that helps users create professional res
 ## Screenshots
 Here are some examples of resumes created with this tool:
 
-| ![Resume Example](/public/mashhad-resume.jpg) | ![Resume Example](public/isfahan-resume.jpg) |
+| ![Resume Example](./public/mashhad-resume.jpg) | ![Resume Example](./public/isfahan-resume.jpg) |
 |-----------------------------------------------|----------------------------------------------|
-| ![Resume Example](/public/tehran-resume.jpg)  | ![Resume Example](/public/shiraz-resume.jpg) |
+| ![Resume Example](./public/tehran-resume.jpg)  | ![Resume Example](./public/shiraz-resume.jpg) |
 
 ## Quick Start
 To run the project locally:
